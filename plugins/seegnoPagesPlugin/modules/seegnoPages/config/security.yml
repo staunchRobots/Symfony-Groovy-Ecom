@@ -1,0 +1,7 @@
+load:
+  is_secure: true
+  credentials: admin
+
+update:
+  is_secure: true
+  credentials: admin

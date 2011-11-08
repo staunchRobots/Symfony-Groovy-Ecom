@@ -1,0 +1,5 @@
+id1,id2,foreignKey,name,lastname,age,date,bonus
+17,12,34,"Nam''e1","very long last
+name with
+few
+newlines embedded",17,2009-12-01,17

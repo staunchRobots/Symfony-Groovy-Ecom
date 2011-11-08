@@ -1,0 +1,23 @@
+#all:
+#  seegnoMenu:
+#    items:
+#      home:
+#        name: Home
+#        link: @homepage
+#        class: first
+#      company:
+#        name: Company
+#      group:
+#        name: Group
+#      products:
+#        name: Products
+#      quality:
+#        name: Quality
+#      location:
+#        name: Location
+#      contacts:
+#        name: Contacts
+#  seegnoAuthentication:
+#    realm: seegno
+#    username: seegno
+#    password: seegno

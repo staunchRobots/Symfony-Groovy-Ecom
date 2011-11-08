@@ -1,0 +1,55 @@
+# seegno plugin (for symfony 1.2 and 1.3/1.4) #
+
+## Geolocation ##
+
+`seegnoPlugin` includes support for the two most well-known geolocation plugins for symfony: `sfDoctrineIpGeolocPlugin` (http://www.symfony-project.org/plugins/sfDoctrineIpGeolocPlugin) and `sfIp2Country` (http://trac.symfony-project.org/wiki/sfIp2Country).
+
+`sfDoctrineIpGeolocPlugin` is the combination of sfIpGeolocHelperPlugin and sfIp2Country and allows a local lookup of country codes, based on the WebNet77 host (http://software77.net/geo-ip/).
+
+== Setup ==
+
+* Download and install any of the above referenced plugins. We suggest using `sfDoctrineIpGeolocPlugin` since it's faster on the lookups.
+
+* Enable the modules: [default, sfGuardAuth, seegnoI18N]
+
+* Enable the helpers: [seegno, seegnoI18N]
+
+* Enable the settings:
+
+    i18n:                   true
+    default_culture:        en
+
+* svn co seegnoI18NPlugin
+
+* Download and install sfDoctrineGuardUser (seegnoI18NGuardSecurityUser requires the sfGuardSecurityUser class).
+
+* ./batch/build the project
+
+* Download the most recent IP database CSV using: wget software77.net/geo-ip/?DL=2 -O IpToCountry.csv.zip
+
+* /usr/bin/unzip IpToCountry.csv.zip and mv IpToCountry.csv ip_to_country.csv
+
+* mysqlimport -u root --password=%PASS% --fields-terminated-by=, --fields-enclosed-by="\"" --columns=ip_from,ip_to,@w,@x,country_code,@y,@z --lines-terminated-by="\n" --replace --delete %DATABASE_NAME% ip_to_country.csv
+
+* ./batch/backup
+
+* Add this to routing.yml:
+
+  culture:
+    url:   /
+    param: { module: core, action: culture }
+  
+  homepage:
+    url:   /:culture
+    param: { module: core, action: index }
+  
+* Add this to actions.class.php of the main action:
+
+  public function executeCulture(sfWebRequest $request)
+  {
+    $this->redirect('@homepage?culture=' . $this->getUser()->getCulture());
+  }
+
+  public function executeIndex(sfWebRequest $request)
+  {
+  }

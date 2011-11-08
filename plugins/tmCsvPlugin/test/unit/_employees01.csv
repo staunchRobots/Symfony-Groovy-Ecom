@@ -1,0 +1,6 @@
+id1,id2,foreignKey,name,lastname,age,date,bonus
+17,12,34,Name1,Surname1,17,2009-12-01,17
+23,23,,"name, name 2",surnam2,17,2009-12-01,20
+,,66,name3,surname3,17,2009-12-01,-15
+
+,,,name4,surname4,17,2009-12-01,

@@ -1,0 +1,3 @@
+all:
+  javascripts: [/seegnoThumbnailPlugin/js/jquery.Jcrop.js]
+  stylesheets: [/seegnoThumbnailPlugin/css/jcrop/jquery.Jcrop.css]

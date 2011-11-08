@@ -1,0 +1,38 @@
+tmCsvPlugin
+=================
+
+Simple plugin for reading from the CSV files. It integrates with a Doctrine ORM but Doctrine is not required for the plugin to work.
+
+Installation
+=================
+
+Documentation
+=================
+As it may sometimes be confusing - Reader means something that reads the CSV file and Writer writes to the CSV file 
+(as opposed to Reader being an object that reads from DB to CSV).
+   
+tmCsvReader
+-----------------
+
+Simplest example, read whole CSV file into an array. The array will contain a key=>value mappings. 
+Keys will be taken from the "header" - which is the first line in the CSV file.
+
+    $csv = new tmCsvReader($testFile, array('header'=>true));
+    $arr = $csv->toArray();
+
+You can set the encoding that will be used to read the CSV file but you will also need to *set appropriate locale* when parsing the CSV: 
+
+    if(setlocale(LC_ALL, 'pl_PL.ISO-8859-2') === false) die();
+
+    $csv = new tmCsvReader($testFile, array('header'=>false, 'from'=>'iso-8859-2')); 
+
+Note: parser will stop when it reads an empty line anywhere in the CSV file.
+
+tmCsvDoctrineReader
+-----------------
+
+tmCsvWriter
+-----------------
+
+tmCsvDoctrineWriter
+-----------------

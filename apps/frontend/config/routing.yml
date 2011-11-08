@@ -1,0 +1,79 @@
+admin:
+  url:   /admin
+  param: { module: seegnoPagesAdmin }
+
+contact:
+  url:   /contact/post
+  param: { module: core, action: contact }
+
+about_us:
+  url:   /contact
+  param: { module: core, action: aboutUs }
+
+showcase:
+  url:   /products/showcase
+  param: { module: products, action: showcase }
+
+categories:
+  url:   /categories/:action
+  param: { module: categories }
+
+search:
+  url:   /search
+  param: { module: products, action: search }
+  
+homepage_options:
+  url:   /:type/:filter
+  param: { module: products, action: index, type: rugs, filter: published }
+  requirements: { type: (all|rugs|furniture), filter: (sold|pending|incomplete|complete|published|unpublished|) }
+
+products:
+  url:   /:pt/:category
+  param: { module: products, action: search }
+
+#Auth
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /forgot/password
+  param: { module: sfGuardAuth, action: password }
+
+productsAdmin:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /admin/products
+    model:       Product
+    module:      productsAdmin
+    column:      id
+    with_show:   true
+    with_wildcard_routes: true
+    collection_actions: { filter: post, batch: post }
+
+categoriesAdmin:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /admin/categories
+    model:       Category
+    module:      categoriesAdmin
+    column:      id
+    with_show:   true
+    with_wildcard_routes: true
+    collection_actions: { filter: post, batch: post }
+
+#Default
+homepage:
+  url:   /
+  param: { module: products, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

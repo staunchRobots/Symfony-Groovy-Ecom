@@ -1,0 +1,99 @@
+all:  
+  flickr_api_key: 60d6e189751371378e9ab102267370a7
+  flickr_api_secret: 0c5ffae69be46c3e
+
+  sf_guard_plugin:
+    remember_cookie_name: baltimorepersianrugRememberMe
+    
+  seegnoPages:
+    configs:
+      default: '/js/ckeditor/default.js'
+    ckeditor:
+      path: '/seegnoPlugin/ckeditor/'
+    templates:
+      default: Default
+      frontpage: Frontpage
+
+  sfDoctrineJCroppablePlugin:
+    models:
+      Product:
+        directory:    products
+        images:
+          photo:
+            sizes:
+              main:  { width: 735 }
+              thumb: { width: 95, height: 95 }
+
+  sfImageTransformPlugin:
+    default_adapter: GD
+    mime_type:
+      auto_detect: true
+      library: gd_mime_type
+
+  seegnoMenu:
+    main:
+      class: menu
+      
+    admin:
+      class: admin
+      items:
+        item:
+          id: item
+          name: 'Item'
+          link: none
+          credentials: admin
+        notes:
+          id: notes
+          name: 'Notes'
+          link: none
+          credentials: admin
+        category_edit:
+          id: category_edit
+          name: 'Category Edit'
+          link: none
+          credentials: admin
+        import:
+          id: import
+          name: 'Import'
+          link: none
+          credentials: admin
+    
+    auth:
+      items:
+        signin:
+          link: none
+          class: login_item
+          partial: core/login
+          show: anonymous
+          linkclass: link
+        sold:
+          name: Show sold
+          link: '@homepage_options?type=all&filter=sold'
+          show: authenticated
+          linkclass: link
+        pendind:
+          name: Show pending sales
+          link: '@homepage_options?type=all&filter=pending'
+          show: authenticated
+          linkclass: link
+        incomplete:
+          name: Show incomplete
+          link: '@homepage_options?type=all&filter=incomplete'
+          show: authenticated
+          linkclass: link
+        complete:
+          name: Show complete
+          link: '@homepage_options?type=all&filter=complete'
+          show: authenticated
+          linkclass: link
+        unpublished:
+          name: Show unpublished
+          link: '@homepage_options?type=all&filter=unpublished'
+          show: authenticated
+          linkclass: link
+        logout:
+          id: logout
+          name: Logout
+          link: sf_guard_signout
+          show: authenticated
+          linkclass: link

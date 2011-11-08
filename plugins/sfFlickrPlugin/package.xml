@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.0.0" version="1.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfFlickrPlugin</name>
+ <channel>pear.symfony-project.com</channel>
+ <summary>Symfony Flickr Plugin</summary>
+ <description>Interface for communicating with the Flickr Api inside of symfony.</description>
+ <lead>
+  <name>Jonathan H. Wage</name>
+  <user>jwage</user>
+  <email>jwage@centresource.com</email>
+  <active>yes</active>
+ </lead>
+ <maintainer>
+  <name>Jonathan H. Wage</name>
+  <user>jwage</user>
+  <email>jwage@centresource.com</email>
+  <active>yes</active>
+ </maintainer>
+ <date>2007-02-20</date>
+ <time>15:54:35</time>
+ <release>
+  <version>1.0.0</version>
+  <state>beta</state>
+ </release>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.symfony-project.com/license">MIT license</license>
+ <notes>-</notes>
+ <contents>
+  <dir name="/">
+   <file role="data" name="README" />
+   <file role="data" name="LICENSE" />
+   <dir name="config">
+    <file role="data" name="app.yml" />
+   </dir>
+   <dir name="lib">
+    <file role="data" name="BasesfFlickr.class.php" />
+    <file role="data" name="sfFlickr.class.php" />
+    <dir name="Phlickr">
+     <file role="data" name="Response.php" />
+     <file role="data" name="Api.php" />
+     <file role="data" name="AuthedGroup.php" />
+     <file role="data" name="Uploader.php" />
+     <file role="data" name="AuthedPhoto.php" />
+     <file role="data" name="User.php" />
+     <file role="data" name="AuthedPhotoset.php" />
+     <file role="data" name="UserList.php" />
+     <file role="data" name="AuthedPhotosetList.php" />
+     <file role="data" name="AuthedUser.php" />
+     <file role="data" name="Cache.php" />
+     <file role="data" name="Exception.php" />
+     <file role="data" name="Group.php" />
+     <file role="data" name="GroupList.php" />
+     <file role="data" name="Photo.php" />
+     <file role="data" name="PhotoList.php" />
+     <file role="data" name="PhotoListIterator.php" />
+     <file role="data" name="PhotoSorter.php" />
+     <file role="data" name="Photoset.php" />
+     <file role="data" name="PhotosetList.php" />
+     <file role="data" name="PhotosetPhotoList.php" />
+     <file rile="data" name="Request.php" />
+     <dir name="Framework">
+      <file role="data" name="IList.php" />
+      <file role="data" name="IPhotoList.php" />
+      <file role="data" name="IPhotoSortStrategy.php" />
+      <file role="data" name="IUploadBatch.php" />
+      <file role="data" name="IUploadListener.php" />
+      <file role="data" name="ListBase.php" />
+      <file role="data" name="ObjectBase.php" />
+     </dir>
+     <dir name="TextUi">
+      <file role="data" name="UploadBatchViewer.php" />
+      <file role="data" name="UploadListener.php" />
+     </dir>
+    </dir>
+   </dir>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>0.8.1</min>
+    <max>1.1.0</max>
+    <exclude>1.1.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog />
+</package>

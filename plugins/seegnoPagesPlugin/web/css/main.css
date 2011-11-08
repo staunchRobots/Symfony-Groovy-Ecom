@@ -1,0 +1,215 @@
+.eip{ padding: 3px; }
+.eip:hover { background-color: #fdff9e; cursor: pointer; }
+
+.eip > form { padding: 0 0 40px; }
+.eip > form > button { float: right; margin: 10px 5px 0; height: 25px; padding: 0 10px; cursor: pointer; }
+
+#sf_admin_container .waiting {
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url('images/waiting.gif') no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffc;
+}
+
+#loading {float: right; width: 16px; height: 10px; position: absolute; right: 26px; top: 10px; background: url('images/waiting.gif') no-repeat 0 0; display: none; }
+
+
+/* @group admin panel */
+
+#sf_admin_container, #sf_admin_header, #sf_admin_content,
+#sf_admin_footer, #sf_admin_content table, #sf_admin_bar {float: left; width: 100%}
+
+#sf_admin_container {
+  width: 900px;
+  margin: 30px 0 20px;
+}
+
+#sf_admin_container .admin-left {
+  float: left;
+  width: 278px;
+  margin-right: 0;
+  margin-left: 1px;
+  border-right: 1px solid #eee;
+  background: none;
+  background-color: #f8f8f8;
+}
+
+#sf_admin_container .admin-right {
+  float: left;  
+  width: 619px;
+  margin-right: 1px;
+  background-color: #f8f8f8;
+}
+
+#sf_admin_container .bluebar {
+  float: left;
+  padding: 0 20px;
+  height: 35px;
+  margin-top: -1px;
+  background: #eee;
+  color: #333;
+  font-size: 12px;
+}
+
+#sf_admin_container .admin-left.for-pages .sf_admin_actions {padding: 0}
+#sf_admin_container .admin-left .bluebar a {padding-top: 0;text-decoration: none}
+
+#sf_admin_container .admin-left .bluebar {
+  width: 238px;
+  line-height: 24px;  
+  border-right: 1px solid #eee;
+  color: #333; 
+}
+
+#sf_admin_container .admin-left ul.tree {width: 248px;margin-left: 30px}
+
+#sf_admin_container .admin-right .bluebar {
+  width: 579px;
+  line-height: 34px;
+}
+
+#sf_admin_container .admin-right ul {
+  float: left;
+  width: 100%;
+  margin: 5px 0 0;
+  line-height: 26px;
+}
+
+#sf_admin_container .admin-right ul li {
+  float: left;
+  width: auto;
+  padding: 0 0 0 10px;
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+
+#sf_admin_container .admin-right ul li a {
+  float: left;
+  height: 30px;
+  display: block;
+  padding-right: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#sf_admin_container .bluebar #admin-pages-menu li.active a {
+  color: #444;
+}
+
+#sf_admin_container .admin-right .page {
+  float: left;
+  width: 579px;
+  padding: 30px 20px;
+  min-height: 300px;  
+}
+
+#sf_admin_container #embedForm {float: left;width: 100%}
+.sf_admin_filter {width: auto}
+
+.sf_admin_actions .nodeinteraction {
+  float: right;
+  margin-top: 7px;
+  font-size: 11px;
+  color: #666;
+  height: 22px;
+  padding: 1px 5px 3px 9px;
+  text-transform: capitalize;
+  text-shadow: none;
+}
+
+.sf_admin_actions .button-wrapper {
+  float: right;  
+  margin-top: 7px;
+}
+
+#sf_admin_container .container {
+  float: left;
+  width: 580px;
+  background: #f6f6f6;
+  margin-bottom: 25px;
+}
+
+#sf_admin_container .container .title {
+  float: left;
+  width: 550px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 15px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+#sf_admin_container .container .body {
+  float: left;
+  width: 540px;
+  padding: 20px;
+  background: #eee;  
+}
+
+.sf_admin_form label,
+.sf_admin_form_field_slug label,
+#sf_admin_container .container .body th {
+  float: left;
+  width: 85px;
+  color: #333;
+  text-align: right;
+  padding-right: 15px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 26px;
+  margin-bottom: 5px;
+}
+
+#sf_admin_container .container .body td {
+  float: left;
+  width: 430px;
+  margin-bottom: 5px;  
+}
+
+#sf_admin_container .url p,
+.sf_admin_form_field_slug input[type='text'],
+#sf_admin_container .container .body td input[type='text'] {
+  float: left;
+  width: 425px;
+  color: #444;
+  font-size: 12px;
+  background: url('/images/input_bg.png') no-repeat 0px -25px;
+}
+
+#sf_admin_container .url p {
+  height: 18px;
+  padding: 3px 5px 4px;
+  background-position: 0px -53px;
+  margin: 5px 0 5px 0;
+  color: #333;
+}
+
+#sf_admin_container .url p span {color: #333}
+#sf_admin_container .page .row {margin-top: 5px}
+#sf_admin_container input[type='checkbox'] {margin-top: 6px}
+#sf_admin_container .actions {border-top: 10px solid #999}
+.sf_admin_actions {float: right; padding: 15px 40px}
+.sf_admin_actions li {float: right}
+
+.sf_admin_actions li a,
+.sf_admin_actions li input[type='button'],
+.sf_admin_actions li input[type='submit'] {
+  float: right;
+  width: 102px;
+  height: 30px;
+  margin-left: 15px;
+  text-decoration: none;
+  line-height: 30px;
+  color: #333;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 0;  
+}

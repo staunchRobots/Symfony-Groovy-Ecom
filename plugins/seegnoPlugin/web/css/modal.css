@@ -1,0 +1,40 @@
+#modal {
+  top: 0px;
+  left: 0px;
+  z-index: 99999;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  border: none;
+  background: none;
+}
+
+#modal .blocker { 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 1000;
+  left: 0;
+  opacity: 0.8;
+  filter: alpha(opacity:80);
+  background: #fff;
+}
+
+
+#modal > .wrapper { 
+  position: relative; 
+  z-index: 1000000 !important; 
+  width: 519px;
+  top: 90px;
+  margin: 0 auto;
+}
+
+#modal > .wrapper a.close { position: absolute; top: 8px; right: 11px; background: #000; width: 35px; height: 35px; }
+#modal > .wrapper a.close:hover { text-decoration: none; }
+
+#modal > .wrapper > .top { height: 40px; background: #eee; }
+#modal > .wrapper > .content { background: #e1e1e1; padding: 0 35px 15px; }
+#modal > .wrapper > .bottom { height: 64px; background: #eee; }
+
+#modal .loader { text-align: center; }

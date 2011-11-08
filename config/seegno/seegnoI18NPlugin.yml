@@ -1,0 +1,6 @@
+languages:
+  en:
+    name: EN
+    slug: english
+    codes: [uk, en, en_US, en_EN]
+    default: true

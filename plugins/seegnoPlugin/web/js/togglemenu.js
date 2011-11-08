@@ -1,0 +1,1 @@
+$(document).ready(function() {  $('li > a').click(function(e) {    $sibling = $(this).siblings('ul');    if ($sibling.size() > 0) {      e.preventDefault();      $sibling.toggle();    }  });});

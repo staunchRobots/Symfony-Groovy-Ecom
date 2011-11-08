@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Page
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          seegnoPagesAdmin
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        table_method: retrieveTreeOrdered
+        title: Pages
+        display: [=title_with_level, slug, is_published]
+        batch_actions: []
+        max_per_page: 100
+      filter:
+        class: false
+      form:
+        actions:
+          _save: ~
+      edit:
+        title:  Edit Page
+        display: [_path, <?php include(sfConfig::get('sf_plugins_dir') . '/seegnoPagesPlugin/modules/seegnoPagesAdmin/templates/_i18n.php'); ?> template, is_published, menu]
+      new:
+        title:  Create Page
+        display: [_path, <?php include(sfConfig::get('sf_plugins_dir') . '/seegnoPagesPlugin/modules/seegnoPagesAdmin/templates/_i18n.php'); ?>, template, is_published, menu]

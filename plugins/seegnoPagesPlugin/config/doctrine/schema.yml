@@ -1,0 +1,36 @@
+Page:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      unique: false
+    Auditable:     ~
+    NestedSet:
+      hasManyRoots: false
+    I18n:
+      fields: [title, keywords, description]
+
+  columns:
+    title:        { type: string(255) }
+    template:     { type: string(255) }
+    is_published: { type: boolean, default: false }
+    module:       { type: string(255) }
+    action:       { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    menu:         { type: string(255) }
+    link:         { type: string(255) }
+
+Slot:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields: [value]
+
+  columns:
+    page_id: { type: integer }
+    name:    { type: string(255) }
+    value:   { type: clob }
+    type:    { type: string(255), default: 'Text' }
+
+  relations:
+    Page:    { foreignAlias: Slots }

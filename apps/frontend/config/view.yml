@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Baltimore Persian Rug
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [main.css, /seegnoPlugin/css/960gs/reset.css, /seegnoPlugin/css/960gs/960.css, fancybox.css, http://carpetbeggers.foxycart.com/files/foxybox.css]
+
+  javascripts:    [http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js, main, https://admin.foxycart.com/v/0.6.0/raw/foxybox.js, https://admin.foxycart.com/v/0.6.0/raw/foxycart.js, jq/easing, jq/fancybox, jq/jcookie, jq/autocomplete, jq/qtip, jq/ajaxmanager, jq/address, /js/gallery.js, jq/watermark]
+
+  has_layout:     true
+  layout:         layout

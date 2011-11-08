@@ -1,0 +1,1 @@
+<?php echo jq_link_to_function('Login', 'showModal("' . url_for('@sf_guard_signin') . '")', array('class' => 'link')) ?>

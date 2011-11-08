@@ -1,0 +1,1 @@
+<?php if (class_exists('seegnoI18N')): ?><?php foreach (sfContext::getInstance()->getUser()->getLanguages() as $culture => $params): ?><?php echo $culture ?>,<?php endforeach ?><?php else: echo sfDoctrineRecord::getDefaultCulture() ?>,<?php endif ?>

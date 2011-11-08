@@ -1,0 +1,1 @@
+<?php echo include_partial('products/import_form', array('form' => $form)); ?>  

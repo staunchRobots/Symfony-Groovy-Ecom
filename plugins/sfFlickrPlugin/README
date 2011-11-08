@@ -1,0 +1,48 @@
+= Symfony Flickr Plugin =
+
+Here are all of the methods available in the sfFlickr classes. More detailed documentation coming soon.
+{{{
+void      addAuthedFavoritePhoto()      Add Authed Favorite Photo
+void    addPhotoToAuthedGroup()     Add Photo To Authed Group
+void    createAuthedPhotoset()    Created Authed Photoset
+void    deleteAuthedFavoritePhoto()     Delete Authed Favorite Photo
+void    deleteAuthedPhoto()     Delete Authed Photo
+void    deleteAuthedPhotoset()    Delete Authed Photoset
+array     getAuthedContactUserList()    Get Authed Contact User List
+array     getAuthedFavoritePhotoList()    Get Authed Favorite Photo List
+object    getAuthedGroup()    Get Authed Group
+array     getAuthedGroupList()    Get Authed Group List
+void    getAuthedPhoto()    Get Authed Photo
+array     getAuthedPhotoList()    Get Authed Photo List
+void    getAuthedPhotoset()     Get Authed Photoset
+array     getAuthedPhotosetList()     Get Authed Photoset List
+array     getAuthedPhotosets()    Get Authed Photosets
+object    getAuthedUser()     Get Authed User
+string    getAuthenticationUrl()    Get Authentication Url
+string    getAuthTokenFromFrob()    Get Auth Token From Frob
+object    getGroup()    Get Group
+void    getGroupByUrl()     Get Group By Url
+void    getGroupDiscussFeedUrl()    Get Group Discuss Feed Url
+void    getGroupPhotoFeedUrl()    Get Group Photo Feed Url
+array     getGroupPhotoList()     Get Group Photo List
+string    getGroupUrl()     Get Group Url
+void    getPhoto()    Get Photo
+void    getPhotosEditUrl()    Get Photos Edit Url
+void    getPhotoset()     Get Photoset
+void    getUploader()     Get Uploader
+object    getUser()     Get User
+array     getUserPhotosets()    Get User Photosets
+void    removePhotoFromAuthedGroup()    Remove Photo From Authed Group
+void    reorderAuthedPhotosets()    Reorder Authed Photosets
+void    setAuthedPhotoDatePosted()    Set Authed Photo Date Posted
+void    setAuthedPhotoDateTaken()     Set Authed Photo Date Taken
+void    setAuthedPhotoMeta()    Set Authed Photo meta
+void    setAuthedPhotosetMeta()     Set Authed Photoset Meta
+void    setAuthedPhotosetPhotos()     Set Authed Photoset Photos
+void    setAuthedPhotoTags()    Set Authed Photo Tags
+void    setAuthToken()    Set Auth Token
+void    setUploaderPerms()    Set Uploader Perms
+void    setUploaderTags()     Set Uploaded Tags
+void    upload()    Upload
+void    uploadBatch()  
+}}}

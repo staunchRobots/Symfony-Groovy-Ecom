@@ -1,0 +1,119 @@
+    XB = Extra Bold
+    SB = Super Bold
+     B = Bold
+    SS = Super Strong
+     S = Strong
+
+    RB = Regular + Bold
+     I = Italic
+    BI = Bold + Italic
+
+<null> = Regular
+     L = Light
+     T = Thin
+    XT = Extra Thin
+
+-----------
+PFBeausSans
+-----------
+
+001.js
+001L.js
+001T.js
+001XT.js
+
+-----------
+AachenStd
+-----------
+
+002B.js
+
+-----------
+Corisande
+-----------
+
+003.js
+003B.js
+
+-----------
+Titillium Text
+-----------
+
+004.js
+004T.js
+004S.js
+004SS.js
+004B.js
+004SB.js
+004XB.js
+
+-----------
+Gotham
+-----------
+
+005.js
+005B.js
+005BI.js
+005I.js
+005L.js
+005LI.js
+005S.js
+005SI.js
+
+-----------
+Apex
+-----------
+
+007.js
+007B.js
+007S.js
+
+-----------
+Aller
+-----------
+
+008.js
+008B.js
+008S.js
+
+-----------
+Eau
+-----------
+
+009.js
+009B.js
+009S.js
+
+-----------
+The Foundry Form Serif
+-----------
+
+010.js
+010B.js
+
+-----------
+Gotham Rounded
+-----------
+
+011.js
+011L.js
+011S.js
+
+-----------
+ITC Avant Garde Gothic Std Book
+-----------
+
+012.js
+
+-----------
+ITC Avant Garde Gothic Std Book Condensed
+-----------
+
+013.js
+
+-----------
+ITC Avant Garde Gothic Std Demi
+-----------
+
+014.js
+

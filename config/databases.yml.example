@@ -1,0 +1,5 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:    mysql://root:root@localhost/carpetbeggers

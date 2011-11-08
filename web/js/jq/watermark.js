@@ -1,0 +1,12 @@
+﻿/*
+ * jQuery Watermark plugin
+ * Version 1.1.2 (19-AUG-2010)
+ * @requires jQuery v1.2.3 or later
+ *
+ * Examples at: http://mario.ec/static/jq-watermark/
+ * Copyright (c) 2010 Mario Estrada
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ */
+(function(c){var a=c.browser.msie&&c.browser.version<8;var b=4;c.watermarker=function(){};c.extend(c.watermarker,{defaults:{color:"#999",left:0,top:0,fallback:false},setDefaults:function(d){c.extend(c.watermarker.defaults,d)},checkVal:function(e,d){if(e==""){c(d).show()}else{c(d).hide()}},html5_support:function(){var d=document.createElement("input");return"placeholder" in d}});c.fn.watermark=function(f,e){var e,d;e=c.extend(c.watermarker.defaults,e);d=this.filter("input[type=text], input[type=password], input[type=email], input[type=url], input[type=search], textarea");if(e.fallback&&c.watermarker.html5_support()){return}d.each(function(){var g,q,j,n,k;var l,i,m,h=0,p,o;g=c(this);if(g.attr("data-jq-watermark")=="processed"){return}q=g.attr("placeholder")!=undefined&&g.attr("placeholder")!=""?"placeholder":"title";j=f===undefined||f===""?c(this).attr(q):f;n=c('<span class="watermark_container"></span>');k=c('<span class="watermark">'+j+"</span>");if(q=="placeholder"){g.removeAttr("placeholder")}n.css({display:"inline-block",position:"relative"});if(a){n.css({zoom:1,display:"inline"})}g.wrap(n).attr("data-jq-watermark","processed");if(this.nodeName.toLowerCase()=="textarea"){e_height=g.css("line-height");e_height=e_height==="normal"?parseInt(g.css("font-size")):e_height;h=(g.css("padding-top")!="auto"?parseInt(g.css("padding-top")):0);h+=(g.css("margin-top")!="auto"?parseInt(g.css("margin-top")):0)}else{e_height=g.outerHeight()}l=g.css("margin-left")!="auto"?parseInt(g.css("margin-left")):0;l+=g.css("padding-left")!="auto"?parseInt(g.css("padding-left")):0;k.css({position:"absolute",display:"block",fontFamily:g.css("font-family"),fontSize:g.css("font-size"),color:e.color,left:b+e.left+l,top:e.top+h,height:e_height,lineHeight:e_height+"px",textAlign:"left"}).data("jq_watermark_element",g);c.watermarker.checkVal(g.val(),k);k.click(function(){c(c(this).data("jq_watermark_element")).focus()});g.before(k).focus(function(){c.watermarker.checkVal(c(this).val(),k);k.animate({opacity:0.7},250)}).blur(function(){c.watermarker.checkVal(c(this).val(),k);k.animate({opacity:1},250)}).keydown(function(r){c(k).hide()})});return this};c(document).ready(function(){c(".jq_watermark").watermark()})})(jQuery);

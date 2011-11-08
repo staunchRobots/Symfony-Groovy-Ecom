@@ -1,0 +1,56 @@
+options:
+  type: INNODB
+  collate: utf8_unicode_ci
+  charset: utf8
+
+Product:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [name]
+      canUpdate: true
+    JCroppable:
+      images: [photo]
+
+  columns:
+    name:         { type: string(255) }
+    price:        { type: decimal }
+    length:       { type: decimal }
+    width:        { type: decimal }
+    quality:      { type: enum, values: ['3', '2', '1'] }
+    status:       { type: enum, values: ['sold', 'sale pending', 'incomplete', 'complete'], default: 'incomplete' }
+    pile:         { type: string(255) }
+    floor:        { type: string(255) }
+    notes:        { type: clob }
+    is_published: { type: boolean, default: false }
+    flickr_id:    { type: integer }
+    notes:        { type: clob }
+    is_on_sale:   { type: boolean, default: false }
+
+  relations:
+    Categories:   { class: Category, refClass: ProductCategory, local: product_id, foreign: category_id, foreignAlias: Products }
+    
+Category:
+  actAs:
+    Sortable:
+      uniqueBy: [parent]
+    Timestampable: ~
+    Sluggable:
+      fields: [name]
+
+  columns:
+    name:         { type: string(255) }
+    parent:       { type: enum, values: ['rug', 'furniture'], default: '' }
+    sort:         { type: enum, values: ['type', 'size'], default: '' }
+
+  relations:
+    Products:     { class: Product, refClass: ProductCategory, local: category_id, foreign: product_id, foreignAlias: Products }
+
+ProductCategory:
+  columns:
+    product_id:         { type: integer, primary: true }
+    category_id:        { type: integer, primary: true }
+
+  relations:
+    Product:            { class: Product, local: product_id, foreign: id, onDelete: CASCADE, foreignAlias: Categories }
+    Category:           { class: Category, local: category_id, foreign: id, onDelete: CASCADE, foreignAlias: Products }

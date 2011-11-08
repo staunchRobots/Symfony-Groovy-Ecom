@@ -1,0 +1,1 @@
+<div class="loader"><?php echo image_tag('/seegnoPlugin/css/images/modal/indicator.gif') ?></div>

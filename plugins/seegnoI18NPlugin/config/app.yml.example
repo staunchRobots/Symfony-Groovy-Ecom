@@ -1,0 +1,20 @@
+#all:
+#  seegnoI18NPlugin:
+#    languages:
+#      pt_PT:
+#        name: PT
+#        slug: portuguese
+#        codes: [pt, pt_PT, pt_BR]
+#        default: true
+#      es_ES:
+#        name: SP
+#        slug: spanish
+#        codes: [es, ES, es_ES]
+#      en_UK:
+#        name: UK
+#        slug: english
+#        codes: [uk, en, en_US, en_EN]
+#      fr_FR:
+#        name: FR
+#        slug: french
+#        codes: [fr, fr_FR]
